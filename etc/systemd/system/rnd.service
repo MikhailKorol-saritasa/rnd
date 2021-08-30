@@ -3,7 +3,7 @@ Description=Clone and update rng repo
 
 [Service]
 WorkingDirectory=/opt
-ExecStartPre=-/usr/bin/git clone repo rnd
+ExecStartPre=-/usr/bin/git clone git@github.com:MikhailKorol-saritasa/rnd.git rnd
 ExecStart=/usr/bin/git -C rnd pull
 Type=oneshot
 RemainAfterExit=yes

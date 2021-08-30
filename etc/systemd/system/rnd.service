@@ -1,0 +1,13 @@
+[Unit]
+Description=Clone and update rng repo
+
+[Service]
+WorkingDirectory=/opt
+ExecStartPre=-/usr/bin/git clone repo rnd
+ExecStart=/usr/bin/git -C rnd pull
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+Requires=network.target
+WantedBy=multi-user.target

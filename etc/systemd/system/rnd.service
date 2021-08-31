@@ -5,6 +5,7 @@ Description=Clone and update rng repo
 WorkingDirectory=/opt
 ExecStartPre=-/usr/bin/git clone https://github.com/MikhailKorol-saritasa/rnd rnd
 ExecStart=/usr/bin/git -C rnd pull
+ExecStartPost=/usr/bin/chown -R nginx:nginx rnd/www
 Type=oneshot
 RemainAfterExit=yes
 

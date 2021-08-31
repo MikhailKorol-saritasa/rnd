@@ -6,7 +6,7 @@ Requires=rnd.service
 
 [Service]
 Type=forking
-PIDFile=/opt/nginx/logs/nginx.pid
+PIDFile=/run/nginx.pid
 ExecStartPre=/opt/nginx/sbin/nginx -c /opt/rnd/nginx.conf -t
 ExecStart=/opt/nginx/sbin/nginx -c /opt/rnd/nginx.conf
 ExecReload=/opt/nginx/sbin/nginx -c /opt/rnd/nginx.conf -s reload

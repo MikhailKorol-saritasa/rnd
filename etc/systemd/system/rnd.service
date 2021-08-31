@@ -1,4 +1,5 @@
 [Unit]
+After=syslog.target network-online.target remote-fs.target nss-lookup.target
 Description=Clone and update rng repo
 
 [Service]
